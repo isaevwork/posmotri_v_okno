@@ -1,0 +1,1 @@
+# Проект "Оно тебе надо" в Яндекс.ПрактикумПроектная работа «Оно тебе надо».# Макет[Макет от Яндекса](https://www.figma.com/design/j3ovkWl6GPafN3Ejg5V7hy/%234-%D0%9F%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B8-%D0%B2-%D0%BE%D0%BA%D0%BD%D0%BE-(Copy)?node-id=0-1&node-type=canvas&t=M0uUe2vNnLpW3UVC-0)# Репозиторийhttps://github.com/isaevwork/posmotri_v_okno
