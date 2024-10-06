@@ -30,6 +30,7 @@ html {
   background-color: #1b1919;
   min-height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -53,21 +54,23 @@ ol {
   list-style: none;
 }
 
-
 .content {
   display: flex;
-  width: 1140px;
-  height: 534px;
-
+  gap: 30px;
 }
 
 .result {
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  padding-right: 30px;
   gap: 16px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .result__video-container {
@@ -76,30 +79,21 @@ ol {
   height: 386px;
 }
 
-.result__video {
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
-
-}
-
-.content__details {
-  width: 399px;
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-
 /*form style*/
 
 .search-form {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .search-form__fieldset {
   border: transparent;
+}
+
+.search-form__fieldset:nth-child(2) {
+  padding-bottom: 5px;
 }
 
 .search-form__fieldset-title {
@@ -110,21 +104,25 @@ ol {
   line-height: 22px;
 }
 
-
 .button {
   font-family: var(--primary-font-fira), sans-serif;
   font-size: 18px;
+  font-weight: 700;
   color: #fff;
   background: none;
-  border: 1px solid ;
+  outline: 1px solid #fff;
+  box-shadow: 0 0 1px #fff;
   cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
-
 
 .button:hover {
   text-decoration: underline;
@@ -139,6 +137,7 @@ ol {
 .search-form__submit-button {
   padding: 6px 74px;
 }
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -184,16 +183,17 @@ ol {
   display: block;
   width: 15px;
   height: 15px;
-  background-color: #fff;
+  background-color: inherit;
 }
 
 .search-form__textfield {
   font-family: var(--primary-font-fira), sans-serif;
   font-size: var(--font_size_l);
+  color: inherit;
   background: none;
   outline: none;
   border: none;
-  width: 100%;
+  min-width: 224px;
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
   appearance: none;
@@ -209,11 +209,20 @@ ol {
 
 /*video-list block*/
 
+.content__details {
+  width: 399px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  justify-content: start;
+}
+
 .title {
   font-family: var(--secondary-font-oswald), sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
+  text-transform: uppercase;
 }
 
 .content__accent {
@@ -222,10 +231,12 @@ ol {
 
 .content__list {
   position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
+  align-self: baseline;
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
   border: none;
   gap: 30px;
 }
@@ -238,14 +249,15 @@ ol {
   height: 103px;
   flex: 1 0;
   object-fit: contain;
+  object-position: center;
 }
 
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  min-width: 200px;
-  padding-right: 6px;
+  gap: 6px;
+  width: 200px;
+  padding: 2px 0;
 }
 
 .content__card-link {
@@ -264,24 +276,14 @@ ol {
   line-height: 30px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  text-decoration: none;
 }
-
 
 .content__video-card-description {
   font-weight: 400;
-  font-family: var(--secondary-font-oswald), sans-serif;
+  font-family: var(--primary-font-fira), sans-serif;
   font-size: var(--font_size_l);
-  text-transform: uppercase;
   color: white;
   line-height: 16.2px;
-  max-height: 65px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
 }
 
 .content__card-link_current {
@@ -293,6 +295,10 @@ ol {
   cursor: pointer;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
@@ -301,11 +307,13 @@ ol {
   text-decoration: underline;
 }
 
-
 .content__video-card-description:hover {
   text-decoration: underline;
 }
 
 .more-button {
   width: 100%;
+  padding: 6px 0;
+  border: 1px solid #fff;
 }
+
